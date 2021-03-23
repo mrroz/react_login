@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+
+    let number=Math.floor(Math.random()*10)
+    let yes='baaad'
+
+    if(number==7){
+         yes=(
+            <h1>goood</h1>
+           )
+    }
+
+    return(
+        <div className="login">
+            <div className="login-screen">
+
+                <div className="login-title">
+                    <h1 >ورود</h1>
+                </div>
+
+                <div className="login-username">
+                    <input type="text" className="login-field" placeholder='نام كاربري'/>
+                    <input type="text" className="login-field" placeholder='پسورد'/>
+                    <h3>{number}</h3>
+                    <h3>{yes}</h3>
+                </div>
+                
+                <div className="login-btn">
+                    <button className="btn">تاييد</button>
+
+                </div>
+            </div>
+        </div>
+    )
 }
 
-export default App;
+
+export default App
